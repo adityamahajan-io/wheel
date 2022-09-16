@@ -1,9 +1,10 @@
 import React from "react";
 
-import dayjs from "dayjs";
 import ProfilePic from "images/ProfilePic.png";
 import { MenuVertical, Clock } from "neetoicons";
 import { Typography, Tag, Avatar, Dropdown, Tooltip } from "neetoui";
+
+import { displayDayAndTime, displayTimeFromCreation } from "./utils";
 
 const Note = ({ note, setSelectedNoteId, setShowDeleteAlert }) => (
   <div className="neeto-ui-border-gray-300 mb-4 w-full border p-4 shadow-md">
@@ -31,11 +32,10 @@ const Note = ({ note, setSelectedNoteId, setShowDeleteAlert }) => (
       <Tag className="bg-gray-100" label="Getting Started" size="small" />
       <div className="flex items-center space-x-2">
         <Clock size={18} />
-        <Tooltip
-          content={dayjs(note.created_at).format("dddd, hh:mmA")}
-          position="bottom"
-        >
-          <Typography style="body3">Created 2 Hours Ago</Typography>
+        <Tooltip content={displayDayAndTime(note.created_at)} position="bottom">
+          <Typography style="body3">
+            {displayTimeFromCreation(note.created_at)}
+          </Typography>
         </Tooltip>
         <Avatar
           size="medium"
