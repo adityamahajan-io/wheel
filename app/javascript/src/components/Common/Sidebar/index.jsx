@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import ProfilePic from "images/ProfilePic.png";
 import { Sidebar as NeetoUISidebar } from "neetoui/layouts";
 import { useHistory } from "react-router-dom";
 
@@ -57,7 +58,7 @@ const Sidebar = () => {
       }}
       profileInfo={{
         name: `${user.first_name} ${user.last_name}`,
-        imageUrl: user.profile_image_path,
+        imageUrl: ProfilePic,
         email: user.email,
         bottomLinks,
       }}
