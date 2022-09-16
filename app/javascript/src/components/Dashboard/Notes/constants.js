@@ -50,8 +50,8 @@ export const TAGS = [
 ];
 
 export const NOTES_FORM_VALIDATION_SCHEMA = yup.object().shape({
-  title: yup.string().required("Title is required"),
-  description: yup.string().required("Description is required"),
+  title: yup.string().trim().required("Title is required"),
+  description: yup.string().trim().required("Description is required"),
   role: yup
     .object()
     .nullable()

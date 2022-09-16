@@ -50,8 +50,8 @@ export const TAGS = [
 ];
 
 export const CONTACTS_FORM_VALIDATION_SCHEMA = yup.object().shape({
-  firstName: yup.string().required("Frist name is required"),
-  lastName: yup.string().required("Last name is required"),
+  firstName: yup.string().trim().required("Frist name is required"),
+  lastName: yup.string().trim().required("Last name is required"),
   role: yup
     .object()
     .nullable()
@@ -62,6 +62,7 @@ export const CONTACTS_FORM_VALIDATION_SCHEMA = yup.object().shape({
     .required("Role is required"),
   email: yup
     .string()
+    .trim()
     .required("Email is required")
     .email("Email format incorrect"),
 });
