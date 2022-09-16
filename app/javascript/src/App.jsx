@@ -5,6 +5,9 @@ import { UserProvider } from "contexts/user";
 
 import Main from "./components/Main";
 
+// eslint-disable-next-line import/order
+import "lib/dayjs";
+
 const App = props => (
   <AuthProvider>
     <UserProvider>
