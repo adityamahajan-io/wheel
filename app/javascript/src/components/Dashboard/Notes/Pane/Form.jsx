@@ -55,7 +55,7 @@ const NoteForm = ({ onClose, refetch, note, isEdit }) => {
               isSearchable
               required
               className="w-full flex-grow-0"
-              label="Assigned Contact"
+              label="Assigned Role"
               name="role"
               options={ROLES}
               placeholder="Select Role"

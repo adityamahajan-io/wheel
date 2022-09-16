@@ -11,8 +11,9 @@ const Note = ({ note, setSelectedNoteId, setShowDeleteAlert }) => (
     <div className="flex justify-between align-middle">
       <Typography style="h4">{note.title}</Typography>
       <Dropdown buttonStyle="text" icon={MenuVertical}>
-        <li>Edit</li>
+        <li className="m-2">Edit</li>
         <li
+          className="m-2"
           onClick={() => {
             setSelectedNoteId(note.id);
             setShowDeleteAlert(true);
