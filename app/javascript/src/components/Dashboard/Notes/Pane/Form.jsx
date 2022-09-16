@@ -37,14 +37,12 @@ const NoteForm = ({ onClose, refetch, note, isEdit }) => {
         <Form className="w-full">
           <Pane.Body className="space-y-6">
             <Input
-              required
               className="w-full flex-grow-0"
               label="Title"
               name="title"
               placeholder="Enter Note Title"
             />
             <Textarea
-              required
               className="w-full flex-grow-0"
               label="Description"
               name="description"
@@ -53,7 +51,6 @@ const NoteForm = ({ onClose, refetch, note, isEdit }) => {
             />
             <Select
               isSearchable
-              required
               className="w-full flex-grow-0"
               label="Assigned Role"
               name="role"
@@ -63,7 +60,6 @@ const NoteForm = ({ onClose, refetch, note, isEdit }) => {
             <Select
               isMulti
               isSearchable
-              required
               className="w-full flex-grow-0"
               label="Tags"
               name="tags"
